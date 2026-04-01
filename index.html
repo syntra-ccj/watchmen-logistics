@@ -2179,9 +2179,34 @@
     const form = document.getElementById('assessmentForm');
     const formContainer = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // In production, this would submit to a backend
+      const submitBtn = form.querySelector('.form-submit');
+      submitBtn.textContent = 'Submitting…';
+      submitBtn.disabled = true;
+
+      const data = {
+        first_name: form.querySelector('[name="firstName"]').value,
+        last_name: form.querySelector('[name="lastName"]').value,
+        email: form.querySelector('[name="email"]').value,
+        company: form.querySelector('[name="company"]').value,
+        title: form.querySelector('[name="title"]').value,
+        annual_freight_spend: form.querySelector('[name="spend"]').value,
+        biggest_challenge: form.querySelector('[name="challenge"]').value,
+        source: 'Watchmen Website — Assessment Form'
+      };
+
+      try {
+        await fetch('https://services.leadconnectorhq.com/hooks/3DbplT4vGfofTCswmtP4/webhook-trigger/oFPY6Cx1oNtqwn2dAMvE', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          mode: 'no-cors'
+        });
+      } catch(err) {
+        console.error('Webhook error:', err);
+      }
+
       formContainer.style.display = 'none';
       formSuccess.classList.add('show');
     });
