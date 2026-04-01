@@ -187,6 +187,19 @@ footer{margin-top:60px;border-top:1px solid var(--border);padding:32px 0;}
 .footer-back{font-size:12px;color:var(--gray);text-decoration:none;transition:color 0.2s;}
 .footer-back:hover{color:var(--gold);}
 
+/* HAMBURGER */
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all 0.3s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+/* MOBILE MENU */
+.mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,10,10,0.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:24px;z-index:99;flex-direction:column;gap:4px;}
+.mobile-menu.open{display:flex;}
+.mobile-menu a{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-lt);text-decoration:none;padding:12px 0;border-bottom:1px solid var(--border);}
+.mobile-menu a:hover{color:var(--white);}
+.mobile-menu a:last-child{border-bottom:none;}
+.mobile-menu .mob-cta{margin-top:12px;background:var(--gold);color:var(--black)!important;padding:14px;border-radius:4px;text-align:center;}
 @media(max-width:768px){
   .kpi-strip,.rm-grid.col4,.rm-grid.col5{grid-template-columns:1fr 1fr;}
   .calc-grid2{grid-template-columns:1fr;}
@@ -196,6 +209,7 @@ footer{margin-top:60px;border-top:1px solid var(--border);padding:32px 0;}
   .tl-item::after{display:none;}
   .tl-card{margin:0;}
   .nav-links{display:none;}
+  .hamburger{display:flex;}
   .bd-label{width:130px;}
 }
 </style>
@@ -221,8 +235,21 @@ footer{margin-top:60px;border-top:1px solid var(--border);padding:32px 0;}
       <li><a href="index.html#contact">Contact</a></li>
       <li><a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">Get Assessment</a></li>
     </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="roi.html" style="color:var(--gold)">ROI Tools</a>
+  <a href="index.html#services">Services</a>
+  <a href="index.html#fivepl">5PL Intelligence</a>
+  <a href="index.html#modes">Transportation</a>
+  <a href="index.html#technology">Technology</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="mob-cta">Get Assessment</a>
+</div>
 
 <!-- HERO -->
 <section class="roi-hero">
@@ -597,6 +624,19 @@ function calc5PL(){
 }
 
 calcTMS(); calcIMS(); calc5PL();
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+mobileMenu.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+  });
+});
 </script>
 </body>
 </html>
