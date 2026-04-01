@@ -40,8 +40,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 .nav-links a:hover{color:var(--white);}
 .nav-links a:hover::after{width:100%;}
 .nav-links a.active{color:var(--gold);}
-.nav-cta{display:inline-flex;align-items:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:6px;background:var(--gold);color:#0A0A0A;text-transform:uppercase;letter-spacing:1px;transition:opacity 0.2s;}
+.nav-cta{display:inline-flex;align-items:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:6px;background:var(--gold);color:#0A0A0A!important;text-transform:uppercase;letter-spacing:1px;transition:opacity 0.2s;}
 .nav-cta:hover{opacity:0.85;}
+.nav-cta::after{display:none!important;}
 
 /* HERO */
 .roi-hero{padding:130px 0 56px;text-align:center;border-bottom:1px solid var(--border);}
