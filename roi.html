@@ -27,14 +27,14 @@ body{background:var(--black);color:var(--white);font-family:'Inter',sans-serif;m
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-inner{max-width:1140px;margin:0 auto;padding:0 24px 0 8px;display:flex;align-items:center;justify-content:space-between;height:72px;}
 .nav-logo{display:flex;align-items:center;text-decoration:none;overflow:hidden;}
 .nav-logo .logo-mark{width:130px;height:130px;margin:-45px -40px -45px -20px;flex-shrink:0;}
 .nav-logo .logo-mark img{width:100%;height:100%;object-fit:contain;}
 .nav-logo .logo-text{display:flex;flex-direction:column;align-items:center;line-height:1;}
 .nav-logo .logo-text .brand{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--white);}
 .nav-logo .logo-text .sub{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gray);margin-top:3px;}
-.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links{display:flex;align-items:center;gap:20px;list-style:none;}
 .nav-links a{font-size:13px;font-weight:500;letter-spacing:0.5px;color:var(--gray-lt);text-decoration:none;transition:color 0.2s;}
 .nav-links a:hover{color:var(--white);}
 .nav-links a.active{color:var(--gold);}
@@ -213,11 +213,11 @@ footer{margin-top:60px;border-top:1px solid var(--border);padding:32px 0;}
       </div>
     </a>
     <ul class="nav-links">
+      <li><a href="roi.html" class="active">ROI Tools</a></li>
       <li><a href="index.html#services">Services</a></li>
       <li><a href="index.html#fivepl">5PL Intelligence</a></li>
       <li><a href="index.html#modes">Transportation</a></li>
       <li><a href="index.html#technology">Technology</a></li>
-      <li><a href="roi.html" class="active">ROI Tools</a></li>
       <li><a href="index.html#contact">Contact</a></li>
       <li><a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">Get Assessment</a></li>
     </ul>
