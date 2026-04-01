@@ -35,10 +35,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 .nav-logo .logo-text .brand{font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:var(--white);}
 .nav-logo .logo-text .sub{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:4px;text-transform:uppercase;color:var(--gray);margin-top:3px;}
 .nav-links{display:flex;align-items:center;gap:20px;list-style:none;}
-.nav-links a{font-size:13px;font-weight:500;letter-spacing:0.5px;color:var(--gray-lt);text-decoration:none;transition:color 0.2s;}
+.nav-links a{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--gray-lt);text-decoration:none;transition:color 0.3s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--gold);transition:width 0.3s;}
 .nav-links a:hover{color:var(--white);}
+.nav-links a:hover::after{width:100%;}
 .nav-links a.active{color:var(--gold);}
-.nav-cta{background:var(--gold)!important;color:var(--black)!important;padding:10px 20px;border-radius:4px;font-weight:700!important;font-size:12px!important;letter-spacing:1px;text-transform:uppercase;}
+.nav-cta{display:inline-flex;align-items:center;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:700;padding:10px 24px;border-radius:6px;background:var(--gold);color:#0A0A0A;text-transform:uppercase;letter-spacing:1px;transition:opacity 0.2s;}
+.nav-cta:hover{opacity:0.85;}
 
 /* HERO */
 .roi-hero{padding:130px 0 56px;text-align:center;border-bottom:1px solid var(--border);}
