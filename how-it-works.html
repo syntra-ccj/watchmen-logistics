@@ -448,27 +448,11 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 reveals.forEach(el => observer.observe(el));
 
-// Scroll-triggered autoplay for YouTube iframes
-const videoObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    const iframe = entry.target;
-    if (entry.isIntersecting) {
-      // Load the src when video scrolls into view (triggers autoplay)
-      if (iframe.dataset.src && !iframe.src) {
-        iframe.src = iframe.dataset.src;
-      }
-    } else {
-      // Pause by removing src when scrolled out of view
-      if (iframe.src) {
-        iframe.dataset.src = iframe.src;
-        iframe.src = '';
-      }
-    }
-  });
-}, { threshold: 0.3 });
-
+// Load all videos immediately on page load — play continuously
 document.querySelectorAll('.autoplay-video').forEach(iframe => {
-  videoObserver.observe(iframe);
+  if (iframe.dataset.src) {
+    iframe.src = iframe.dataset.src;
+  }
 });
 </script>
 
