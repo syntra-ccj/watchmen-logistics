@@ -89,6 +89,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,10,0.9
 /* Video box */
 .video-box{position:relative;border-radius:16px;overflow:hidden;background:var(--surface);border:1px solid var(--border2);aspect-ratio:16/9;box-shadow:0 40px 80px rgba(0,0,0,0.6),0 0 0 1px rgba(212,175,55,0.1);}
 .video-box iframe{width:100%;height:100%;border:none;}
+.video-box video{width:100%;height:100%;object-fit:cover;display:block;}
 .video-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;background:var(--surface);min-height:300px;}
 .video-placeholder .play-icon{width:64px;height:64px;border-radius:50%;background:var(--gold-dim);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;}
 .video-placeholder .play-icon svg{width:24px;height:24px;fill:var(--gold);margin-left:3px;}
@@ -236,9 +237,11 @@ footer{border-top:1px solid var(--border);padding:32px 0;}
         </div>
       </div>
       <div class="reveal-right">
-        <!-- VIDEO 1: Data Optimization -->
+        <!-- VIDEO 1: Meet the Future -->
         <div class="video-box">
-          <iframe class="autoplay-video" data-src="https://www.youtube.com/embed/8wZlKGbm7Zk?autoplay=1&mute=1&loop=1&playlist=8wZlKGbm7Zk&rel=0&modestbranding=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <video autoplay muted loop playsinline>
+            <source src="videos/meet-the-future.mp4" type="video/mp4">
+          </video>
         </div>
         <!-- Timeline below video -->
         <div class="timeline" style="margin-top:40px;">
@@ -290,7 +293,9 @@ footer{border-top:1px solid var(--border);padding:32px 0;}
     <div class="video-full reveal">
       <div class="video-box">
         <!-- VIDEO 2: One Screen Zero Guesswork -->
-        <iframe class="autoplay-video" data-src="https://www.youtube.com/embed/XVqOZs0A6so?autoplay=1&mute=1&loop=1&playlist=XVqOZs0A6so&rel=0&modestbranding=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <video autoplay muted loop playsinline>
+          <source src="videos/one-screen.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
 
@@ -357,7 +362,9 @@ footer{border-top:1px solid var(--border);padding:32px 0;}
       <div class="reveal-left" style="order:1;">
         <!-- VIDEO 3: Ocean Tracking -->
         <div class="video-box">
-          <iframe class="autoplay-video" data-src="https://www.youtube.com/embed/T-YMLyx_Yps?autoplay=1&mute=1&loop=1&playlist=T-YMLyx_Yps&rel=0&modestbranding=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <video autoplay muted loop playsinline>
+            <source src="videos/ocean-tracking.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -385,7 +392,9 @@ footer{border-top:1px solid var(--border);padding:32px 0;}
       <div class="reveal-right">
         <!-- VIDEO 4: More Than Dots on a Map -->
         <div class="video-box">
-          <iframe class="autoplay-video" data-src="https://www.youtube.com/embed/MeemDJOX3pU?autoplay=1&mute=1&loop=1&playlist=MeemDJOX3pU&rel=0&modestbranding=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          <video autoplay muted loop playsinline>
+            <source src="videos/more-than-dots.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -448,12 +457,6 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 reveals.forEach(el => observer.observe(el));
 
-// Load all videos immediately on page load — play continuously
-document.querySelectorAll('.autoplay-video').forEach(iframe => {
-  if (iframe.dataset.src) {
-    iframe.src = iframe.dataset.src;
-  }
-});
 </script>
 
 </body>
