@@ -187,7 +187,9 @@
     .nav-inner {
       max-width: 1400px; margin: 0 auto; padding: 0 24px 0 8px;
       width: 100%;
-      display: flex; align-items: center; justify-content: space-between;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
     }
     .nav-logo {
       display: flex; align-items: center; gap: 14px;
@@ -221,7 +223,7 @@
       margin-top: 3px;
     }
     .nav-links {
-      display: flex; align-items: center; gap: 14px;
+      display: flex; align-items: center; justify-content: center; gap: 14px;
       list-style: none;
     }
     .nav-links a {
@@ -247,7 +249,6 @@
       background: var(--gold); color: #0A0A0A;
       transition: all 0.3s ease;
       white-space: nowrap;
-      margin-left: auto;
     }
     .nav-cta:hover {
       background: var(--gold-bright);
