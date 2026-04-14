@@ -540,49 +540,46 @@
       background: #0d0d0d;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 0;
+      padding: 0.9rem 0;
     }
     .proof-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
     }
     .proof-item {
-      padding: 2.5rem 2.5rem;
-      border-left: 3px solid var(--gold);
-      position: relative;
-    }
-    .proof-item + .proof-item {
-      border-right: none;
-      margin-left: 2.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--gold);
     }
     .proof-num {
       font-family: 'Montserrat', sans-serif;
       font-weight: 900;
-      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      font-size: 1.25rem;
       color: var(--gold);
       line-height: 1;
-      letter-spacing: -0.02em;
+      white-space: nowrap;
     }
     .proof-unit {
-      font-size: 0.55em;
+      font-size: 0.65em;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      vertical-align: baseline;
-      margin-left: 2px;
+      margin-left: 1px;
     }
     .proof-label {
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--gray-lt);
-      margin-top: 0.5rem;
     }
-    @media (max-width: 768px) {
-      .proof-grid { grid-template-columns: 1fr; }
-      .proof-item + .proof-item { margin-left: 0; margin-top: 1.5rem; }
+    @media (max-width: 640px) {
+      .proof-grid { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 0 1rem; }
     }
 
     /* ============================================================
@@ -1681,6 +1678,28 @@
   </section>
 
   <!-- ============================================================
+       PROOF STRIP
+  ============================================================ -->
+  <div class="proof-strip">
+    <div class="wrap">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <span class="proof-num">5<span class="proof-unit">min</span></span>
+          <span class="proof-label">Average Quote SLA</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">AI</span>
+          <span class="proof-label">Carrier Matching Engine</span>
+        </div>
+        <div class="proof-item">
+          <span class="proof-num">24/7</span>
+          <span class="proof-label">Real-Time Visibility</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
        TRUSTED BY
   ============================================================ -->
   <section class="trusted" id="trusted">
@@ -1720,28 +1739,6 @@
         <span class="carousel-dot">✦</span>
         <span class="carousel-term">Cross-Vertical Solutions</span>
         <span class="carousel-dot">✦</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       HERO PROOF STRIP
-  ============================================================ -->
-  <section class="proof-strip">
-    <div class="wrap">
-      <div class="proof-grid">
-        <div class="proof-item">
-          <div class="proof-num">5<span class="proof-unit">min</span></div>
-          <div class="proof-label">Average Quote SLA</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">AI</div>
-          <div class="proof-label">Carrier Matching Engine</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-num">24/7</div>
-          <div class="proof-label">Real-Time Visibility</div>
-        </div>
       </div>
     </div>
   </section>
