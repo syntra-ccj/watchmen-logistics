@@ -1583,6 +1583,9 @@
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
       .mobile-menu { display: block; }
+      /* Switch nav to flex so hamburger stays far right */
+      .nav-inner { display: flex; justify-content: space-between; align-items: center; }
+      .nav-right { margin-left: auto; }
 
       .hero h1 { font-size: clamp(34px, 8vw, 48px); }
       .hero-stats { gap: 24px; }
@@ -1602,13 +1605,14 @@
       .footer-bottom { flex-direction: column; text-align: center; }
 
       /* All button groups stack full-width on mobile */
-      .hero-btns, .cta-btns { flex-direction: column; align-items: stretch; }
+      .hero-btns, .cta-btns { flex-direction: column; align-items: stretch; padding-bottom: 20px; }
       .hero-btns .btn, .cta-btns .btn {
         display: flex !important;
         width: 100%;
         justify-content: center;
         text-align: center;
         box-sizing: border-box;
+        min-height: 52px;
       }
       /* Mobile menu buttons */
       .mobile-menu .btn {
