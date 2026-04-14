@@ -1603,7 +1603,24 @@
 
       /* All button groups stack full-width on mobile */
       .hero-btns, .cta-btns { flex-direction: column; align-items: stretch; }
-      .hero-btns .btn, .cta-btns .btn { width: 100%; justify-content: center; text-align: center; }
+      .hero-btns .btn, .cta-btns .btn {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      /* Mobile menu buttons */
+      .mobile-menu .btn {
+        display: flex !important;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        box-sizing: border-box;
+        border-bottom: none !important;
+        margin-top: 10px;
+        padding: 14px 20px;
+      }
     }
     @media (max-width: 480px) {
       .modes-grid { grid-template-columns: 1fr; }
@@ -2558,19 +2575,11 @@
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
-    // Close menu on hash links; let page links navigate freely
+    // Close menu on any link click — never preventDefault
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        const href = link.getAttribute('href') || '';
-        if (href.startsWith('#')) {
-          hamburger.classList.remove('open');
-          mobileMenu.classList.remove('open');
-        } else {
-          hamburger.classList.remove('open');
-          mobileMenu.classList.remove('open');
-          // Small delay so menu closes before navigation
-          // (no preventDefault — navigation proceeds normally)
-        }
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
       });
     });
     // Close on Escape
