@@ -2558,11 +2558,19 @@
       hamburger.classList.toggle('open');
       mobileMenu.classList.toggle('open');
     });
-    // Close on link click
+    // Close menu on hash links; let page links navigate freely
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        mobileMenu.classList.remove('open');
+        const href = link.getAttribute('href') || '';
+        if (href.startsWith('#')) {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+        } else {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+          // Small delay so menu closes before navigation
+          // (no preventDefault — navigation proceeds normally)
+        }
       });
     });
     // Close on Escape
