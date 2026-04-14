@@ -1231,6 +1231,72 @@
     }
 
     /* ============================================================
+       TESTIMONIALS
+    ============================================================ */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: var(--surface);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, var(--surface) 40%);
+    }
+    .t-stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+    }
+    .t-quote {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--gray-lt);
+      font-style: italic;
+      flex: 1;
+      margin: 0;
+    }
+    .t-attribution {
+      border-top: 1px solid var(--border);
+      padding-top: 1rem;
+    }
+    .t-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+    .t-company {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-top: 0.2rem;
+    }
+    .t-result {
+      display: inline-block;
+      background: rgba(212,175,55,0.10);
+      border: 1px solid rgba(212,175,55,0.3);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.9rem;
+      border-radius: 4px;
+    }
+    @media (max-width: 1024px) {
+      .testimonials-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    }
+
+    /* ============================================================
        CTA / CONTACT
     ============================================================ */
     .cta-section {
@@ -2179,6 +2245,51 @@
           <p>End-to-end strategic partnership &mdash; design, manage, and optimize your entire supply chain globally. Your logistics function, elevated.</p>
           <div class="tag">5PL Model &middot; Strategic</div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS — PROOF OVER PROMISES
+  ============================================================ -->
+  <section class="section testimonials-section" id="results">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <div class="section-eyebrow">Client Results</div>
+        <h2 class="section-title">Proof Over<br><span class="gradient-text">Promises</span></h2>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="t-stars">★★★★★</div>
+          <blockquote class="t-quote">"We were skeptical that a boutique brokerage could match what our previous national provider offered in technology. Watchmen's AI-driven visibility and 5-minute quote turnaround exceeded what we had with a firm ten times their size."</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Director of Logistics</div>
+            <div class="t-company">Regional E-Commerce Retailer · $12M Annual Freight Spend</div>
+          </div>
+          <div class="t-result">↓ 11% Freight Cost Reduction in 60 Days</div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="t-stars">★★★★★</div>
+          <blockquote class="t-quote">"The ROI calculator they showed us in the sales process was spot on — we actually beat the savings projection. More importantly, our ops team stopped spending half their day on check calls. That time is now being used on actual strategy."</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">VP of Supply Chain</div>
+            <div class="t-company">Mid-Market Manufacturer · 180 loads/month</div>
+          </div>
+          <div class="t-result">↓ 47% Reduction in Manual Check Calls</div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="t-stars">★★★★★</div>
+          <blockquote class="t-quote">"Food &amp; beverage is unforgiving on compliance and timing. Watchmen built a carrier program around our temperature and documentation requirements that actually works at scale. Genuinely the best brokerage relationship we've had in 12 years."</blockquote>
+          <div class="t-attribution">
+            <div class="t-name">Supply Chain Manager</div>
+            <div class="t-company">National F&amp;B Distributor · Temperature-controlled freight</div>
+          </div>
+          <div class="t-result">✓ 98.4% On-Time Delivery Rate</div>
+        </div>
+
       </div>
     </div>
   </section>
