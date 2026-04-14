@@ -443,6 +443,15 @@
       display: flex; flex-wrap: wrap; gap: 14px;
       margin-bottom: 56px;
     }
+    .cta-btns {
+      display: flex; flex-wrap: wrap; gap: 14px;
+      justify-content: center;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .cta-btns { flex-direction: column; align-items: stretch; }
+      .cta-btns .btn { width: 100%; justify-content: center; }
+    }
     .hero-stats {
       display: flex; flex-wrap: wrap; gap: 40px;
       padding-top: 40px;
@@ -1825,6 +1834,11 @@
           <p>Tech-driven orchestration of your complete supply chain &mdash; demand sensing, network design, predictive rerouting, and continuous optimization at the system level.</p>
         </div>
       </div>
+      <div class="cta-btns">
+        <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
+        <a href="how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
+        <a href="roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
+      </div>
     </div>
   </section>
 
@@ -2344,6 +2358,19 @@
       </div>
     </div>
   </section>
+
+  <!-- ============================================================
+       MID-PAGE CTA BUTTONS
+  ============================================================ -->
+  <div style="padding: 2rem 0 3rem; background: var(--bg);">
+    <div class="wrap">
+      <div class="cta-btns">
+        <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">See What's Possible &rarr;</a>
+        <a href="how-it-works.html" class="btn btn-outline">See How It Works &rarr;</a>
+        <a href="roi.html" class="btn btn-outline">Quantify Your ROI &rarr;</a>
+      </div>
+    </div>
+  </div>
 
   <!-- ============================================================
        CTA / CONTACT FORM
