@@ -256,6 +256,9 @@
       background: var(--gold-bright);
       box-shadow: 0 0 20px var(--gold-glow);
     }
+    .nav-right {
+      display: flex; align-items: center; gap: 12px;
+    }
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
       cursor: pointer; background: none; border: none; padding: 4px;
@@ -290,8 +293,14 @@
       transition: color 0.3s ease;
     }
     .mobile-menu a:hover { color: var(--gold); }
-    .mobile-menu .btn { margin-top: 16px; width: 100%; justify-content: center; }
-    .mobile-menu .nav-cta { color: #0A0A0A !important; background: var(--gold); letter-spacing: 0.1em; }
+    .mobile-menu .btn {
+      display: flex; margin-top: 12px;
+      width: 100%; justify-content: center;
+      border-bottom: none; padding: 14px 20px;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      font-size: 13px;
+    }
+    .mobile-menu .btn:hover { color: inherit; }
 
     /* ============================================================
        HERO
@@ -1629,10 +1638,12 @@
         <li><a href="#trinity">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">See What's Possible</a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-right">
+        <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="nav-cta">See What's Possible</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
