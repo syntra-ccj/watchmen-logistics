@@ -491,8 +491,24 @@
       transition: opacity 0.4s ease;
       flex-shrink: 0;
     }
-    .trusted-track img:hover {
-      opacity: 0.85;
+    .trusted-track img:hover { opacity: 0.85; }
+    .carousel-term {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray-lt);
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: color 0.3s;
+    }
+    .carousel-term:hover { color: var(--gold); }
+    .carousel-dot {
+      color: var(--gold);
+      font-size: 10px;
+      flex-shrink: 0;
+      opacity: 0.6;
     }
     /* Placeholder logos before real ones are added */
     .logo-placeholder {
@@ -1394,10 +1410,10 @@
       <div class="hero-content">
         <div class="hero-badge">
           <svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6L8 0Z"/></svg>
-          Authorized Trinity Logistics Agent
+          AI-Powered Freight Brokerage
         </div>
-        <h1>Your Supply Chain <span class="gradient-text">Command Center</span></h1>
-        <p class="hero-sub">We orchestrate your entire supply chain &mdash; or start with a single pain point. Every mode, every border, every partner, unified and optimized under one intelligent system.</p>
+        <h1>Smarter Freight.<br><span class="gradient-text">Measurable ROI.</span><br>Zero Guesswork.</h1>
+        <p class="hero-sub">Your supply chain strategy should be a competitive advantage, not a cost center. Watchmen makes that happen — powered by AI-driven matching, predictive analytics that turn your freight data into decisions, automated operations, and a dedicated team that moves as fast as your supply chain demands.</p>
         <div class="hero-btns">
           <a href="https://api.bludata.ai/widget/booking/PXKRGlG22uxqd8P2fA8n" target="_blank" rel="noopener" class="btn btn-primary">Free Network Assessment &rarr;</a>
           <a href="#fivepl" class="btn btn-outline">Explore 5PL Intelligence</a>
@@ -1428,34 +1444,42 @@
        TRUSTED BY
   ============================================================ -->
   <section class="trusted" id="trusted">
-    <div class="trusted-label">Trusted by Industry Leaders</div>
+    <div class="trusted-label">Powered By</div>
     <div style="overflow:hidden;">
       <div class="trusted-track" id="logoTrack">
-        <img src="logos/jbs_white_transparent.png" alt="JBS" />
-        <img src="logos/wild_fork_white_transparent.png" alt="Wild Fork Foods" />
-        <img src="logos/grace_good_move_white_transparent.png" alt="Grace Kennedy Foods" />
-        <img src="logos/vima_full_white_transparent.png" alt="Vima Foods" />
-        <img src="logos/thrive_white_transparent.png" alt="Thrive Causemetics" />
-        <img src="logos/by_rosie_jane_white_transparent.png" alt="By Rosie Jane" />
-        <img src="logos/foundation_wellness_white_transparent.png" alt="Foundation Wellness" />
-        <img src="logos/premier_packaging_white_transparent.png" alt="Premier Packaging" />
-        <img src="logos/action_white_transparent.png" alt="Action Gypsum Supply" />
-        <img src="logos/keyston_bros_white_transparent.png" alt="Keyston Bros" />
-        <img src="logos/nt_ruddock_white_transparent.png" alt="NT Ruddock" />
-        <img src="logos/riverside_white_transparent.png" alt="Riverside Natural Foods" style="height:64px;" />
-        <!-- Duplicate set for seamless infinite scroll -->
-        <img src="logos/jbs_white_transparent.png" alt="JBS" />
-        <img src="logos/wild_fork_white_transparent.png" alt="Wild Fork Foods" />
-        <img src="logos/grace_good_move_white_transparent.png" alt="Grace Kennedy Foods" />
-        <img src="logos/vima_full_white_transparent.png" alt="Vima Foods" />
-        <img src="logos/thrive_white_transparent.png" alt="Thrive Causemetics" />
-        <img src="logos/by_rosie_jane_white_transparent.png" alt="By Rosie Jane" />
-        <img src="logos/foundation_wellness_white_transparent.png" alt="Foundation Wellness" />
-        <img src="logos/premier_packaging_white_transparent.png" alt="Premier Packaging" />
-        <img src="logos/action_white_transparent.png" alt="Action Gypsum Supply" />
-        <img src="logos/keyston_bros_white_transparent.png" alt="Keyston Bros" />
-        <img src="logos/nt_ruddock_white_transparent.png" alt="NT Ruddock" />
-        <img src="logos/riverside_white_transparent.png" alt="Riverside Natural Foods" style="height:64px;" />
+        <span class="carousel-term">Predictive Analytics</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Data-Driven Decision Making</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Full Global Supply Chain Visibility</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Automated Exception Alerts</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">TMS — 3PL / 4PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Managed Transportation / 5PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Average 8–15% Cost Reduction</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Cross-Vertical Solutions</span>
+        <span class="carousel-dot">✦</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="carousel-term">Predictive Analytics</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Data-Driven Decision Making</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Full Global Supply Chain Visibility</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Automated Exception Alerts</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">TMS — 3PL / 4PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Managed Transportation / 5PL</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Average 8–15% Cost Reduction</span>
+        <span class="carousel-dot">✦</span>
+        <span class="carousel-term">Cross-Vertical Solutions</span>
+        <span class="carousel-dot">✦</span>
       </div>
     </div>
   </section>
